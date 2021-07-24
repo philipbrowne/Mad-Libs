@@ -1,0 +1,5 @@
+{% extends "base.html" %} {% block title%} Mad Libs Story {% endblock %} {% block content %} <form action="/story1"> {%
+    for i in range(promptnum) %} <label for="{{prompts[i]}}{{i}}">{{prompts[i]}}:</label>
+    <input type="text" class="storyform" name="{{prompts[i]}}" id="{{prompts[i]}}{{i}}" required><br> {% endfor %}
+    <button>Submit</button>
+</form> {% endblock %}
